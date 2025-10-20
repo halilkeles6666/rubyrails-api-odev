@@ -4,7 +4,6 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   host: localhost
   username: postgres
-  # 1. ADIM'DA BELİRLEDİĞİN ŞİFREYİ BURAYA YAZ:
   password: halil
 
 development:
