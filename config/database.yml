@@ -1,0 +1,16 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  host: localhost
+  username: postgres
+  # 1. ADIM'DA BELİRLEDİĞİN ŞİFREYİ BURAYA YAZ:
+  password: halil
+
+development:
+  <<: *default
+  database: odev_projesi_development
+
+test:
+  <<: *default
+  database: odev_projesi_test
