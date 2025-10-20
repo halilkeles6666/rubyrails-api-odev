@@ -23,7 +23,7 @@ class Api::V1::BooksController < ApplicationController
 
   private
 
-  # Güvenlik için 'Strong Parameters'
+  
   def book_params
     params.require(:book).permit(:title, :author_id, :genre_id)
   end
