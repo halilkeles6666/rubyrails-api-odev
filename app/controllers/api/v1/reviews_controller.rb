@@ -24,9 +24,9 @@ class Api::V1::ReviewsController < ApplicationController
 
   private
 
-  # Güvenlik için 'Strong Parameters'
+  
   def review_params
-    # Gelen JSON'da bir 'review' objesi bekler ve sadece bunlara izin verir:
+    
     params.require(:review).permit(:content, :rating, :book_id, :user_id)
   end
 end

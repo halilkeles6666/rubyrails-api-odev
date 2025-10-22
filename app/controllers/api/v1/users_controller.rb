@@ -24,9 +24,9 @@ class Api::V1::UsersController < ApplicationController
 
   private
 
-  # Güvenlik için 'Strong Parameters'
+  
   def user_params
-    # Gelen JSON'da bir 'user' objesi bekler ve sadece bunlara izin verir:
+    
     params.require(:user).permit(:username, :email)
   end
 end
