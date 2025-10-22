@@ -1,11 +1,39 @@
-### Yeni bir kitap oluştur
+### 1. YENİ KİTAP OLUŞTURMA (POST /books)
 POST http://localhost:3000/api/v1/books
 Content-Type: application/json
 
 {
   "book": {
-    "title": "Dune",
+    "title": "Dune Mesihi",
     "author_id": 1,
     "genre_id": 1
+  }
+}
+
+### -------------------------------------------
+
+### 2. YENİ KULLANICI OLUŞTURMA (POST /users)
+POST http://localhost:3000/api/v1/users
+Content-Type: application/json
+
+{
+  "user": {
+    "username": "rapor_kullanicisi",
+    "email": "rapor@test.com"
+  }
+}
+
+### -------------------------------------------
+
+### 3. YENİ YORUM OLUŞTURMA (POST /reviews)
+POST http://localhost:3000/api/v1/reviews
+Content-Type: application/json
+
+{
+  "review": {
+    "content": "Bu kitap harikaydı, rapor için test ediyorum.",
+    "rating": 5,
+    "book_id": 1, 
+    "user_id": 1
   }
 }

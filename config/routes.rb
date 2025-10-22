@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
+      get "authors/index"
+      get "authors/show"
+      get "genres/index"
+      get "genres/show"
       get "reviews/index"
       get "reviews/show"
       get "reviews/create"
@@ -13,6 +17,8 @@ Rails.application.routes.draw do
       resources :genres, only: [ :index, :show ]
       resources :users, only: [ :index, :show, :create ]
       resources :reviews, only: [ :index, :show, :create ]
+      resources :authors, only: [ :index, :show ]
+      resources :genres, only: [ :index, :show ]
     end
   end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
